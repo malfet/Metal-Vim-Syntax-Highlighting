@@ -13,7 +13,7 @@ runtime! syntax/cpp.vim
 unlet b:current_syntax
 
 syn keyword basicMetalKeywords vertex fragment constant buffer devicethreadgroup patch
-syn keyword scalarMetalTypes ptrdiff_t half uchar uint
+syn keyword scalarMetalTypes ptrdiff_t half uchar uint bfloat
 
 "metal half precision floating-point literal value
 syn match metalFloat "\d\+[Hh]"
@@ -23,7 +23,7 @@ syn match metalFloat "\d\+\.\d*[Hh]"
 syn match metalFloat "\d\+[Uu]"
 
 syn match attributes "\[\[.*\]\]"
-syn match metalTypes "\<\(bool\|char\|uchar\|short\|ushort\|half\|int\|uint\|float\)[2-4]"
+syn match metalTypes "\<\(bool\|char\|uchar\|short\|ushort\|half\|int\|uint\|float\|bfloat\)[2-4]"
 syn match packedMetalTypes "packed_\(char\|uchar\|short\|ushort\|half\|int\|uint\|float\)[2-4]"
 syn match atomicType "atomic_\(int\|uint\|bool\)"
 syn match atomicTemplate "atomic<\(int\|uint\|bool\)>"
